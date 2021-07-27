@@ -1,0 +1,174 @@
+program ders1
+
+implicit none
+
+integer::but,ortalama
+
+real::x,y,z,t,kalan
+
+print*,"bu program universite için not ortalamasi hesaplar ve harf notunu belirler."
+
+print*,"harf notuna gore basarili veya but karari verilir."
+
+
+print*,"1.vize notunuzu giriniz:"
+
+read*,x
+
+
+print*,"2.vize notunuzu giriniz:"
+
+read*,y
+
+
+kalan= (40-(x*0.3)-(y*0.3))/0.4
+
+print*,"gecmek icin gereken min.final notu:",kalan
+
+
+print*,"final notunuzu giriniz:"
+
+read*,z 
+
+
+ortalama=(x*0.3)+(y*0.3)+(z*0.4)
+
+print*,"not ortalamaniz:",ortalama
+
+ 
+if(ortalama>100) then
+
+print*,"syntax errrorororororo........................"
+
+stop
+
+end if
+
+
+
+select case(ortalama)
+
+case(0:25)
+
+print*,"FF"
+
+
+case(26:33)
+
+print*,"FD"
+
+
+case(34:39)
+
+print*,"DD"
+
+
+case(40:46)
+
+print*,"DC"
+
+
+case(47:54)
+
+print*,"CC"
+
+
+case(55:62)
+
+print*,"CB"
+
+
+case(63:68)
+
+print*,"BB"
+
+
+case(69:74)
+
+print*,"BA"
+
+
+case(75:100)
+
+print*,"AA"
+
+
+
+end select
+ 
+
+if(ortalama<40)then
+
+print*,"bute kaldiniz:"
+
+print*,"but notunuzu giriniz:"
+
+read*,t
+
+but=(x*0.3)+(y*0.3)+(t*0.4)
+
+print*,"yeni ortalamaniz:",but
+
+
+if(but>100)then
+
+print*,"syntax errrorororororo........................"
+
+stop
+
+end if
+
+
+
+select case(but)
+
+case(0:25)
+
+print*,"FF"
+
+
+case(26:33)
+
+print*,"FD"
+
+
+case(34:39)
+
+print*,"DD"
+
+
+case(40:46)
+
+print*,"DC"
+
+
+case(47:54)
+
+print*,"CC"
+
+
+case(55:62)
+
+print*,"CB"
+
+
+case(63:68)
+
+print*,"BB"
+
+
+case(69:74)
+
+print*,"BA"
+
+
+case(75:100)
+
+print*,"AA"
+
+
+
+end select
+
+end if
+end program
